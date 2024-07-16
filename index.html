@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Transactions</title>
+    <link rel="stylesheet" href="bootstrap files/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Customer Transactions</h1>
+      <div class="form-group row">
+        <label for="filterName" class="col-sm-2 col-form-label"
+          >Filter by Name:</label
+        >
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="filterName" />
+        </div>
+        <label for="filterAmount" class="col-sm-2 col-form-label"
+          >Filter by Amount:</label
+        >
+        <div class="col-sm-4">
+          <input type="number" class="form-control" id="filterAmount" />
+        </div>
+      </div>
+      <table
+        class="table table-striped-columns table-striped mt-3 table-hover"
+        id="customerTable"
+      >
+        <thead>
+          <tr>
+            <th>Customer Name</th>
+            <th>Transaction Date</th>
+            <th>Transaction Amount</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="chart" class="mt-5"></div>
+    </div>
+    <script src="bootstrap files/bootstrap.min.css"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
