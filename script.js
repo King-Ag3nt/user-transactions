@@ -1,4 +1,3 @@
-// Data
 const data = {
   customers: [
     { id: 1, name: "Ahmed Ali" },
@@ -20,13 +19,11 @@ const data = {
   ],
 };
 
-// Elements
 let filterNameInput = document.getElementById("filterName");
 let filterAmountInput = document.getElementById("filterAmount");
 let customerTableBody = document.querySelector("#customerTable tbody");
 let chartElement = document.getElementById("chart");
 
-// getCustomerName functions
 function getCustomerName(customerId) {
   for (let i = 0; i < data.customers.length; i++) {
     if (data.customers[i].id === customerId) {
@@ -115,10 +112,8 @@ function renderChart(transactions) {
   chart.render();
 }
 
-// Initial rendering
 renderTable(data.customers, data.transactions);
 renderChart(data.transactions);
 
-// Event listeners
 filterNameInput.addEventListener("input", filterTransactions);
 filterAmountInput.addEventListener("input", filterTransactions);
